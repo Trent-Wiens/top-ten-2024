@@ -1,0 +1,244 @@
+/* Change the background color of the page */
+body {
+    background-color: lightblue;
+}
+
+/* Style the main heading */
+h1 {
+    color: darkblue;
+    text-align: center;
+}
+
+/* Style paragraphs */
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: gray;
+}
+
+/* Style elements with the class "special-paragraph" */
+.special-paragraph {
+    color: green;
+    font-weight: bold;
+}
+
+/* Style the element with the ID "unique-paragraph" */
+#unique-paragraph {
+    color: red;
+    text-decoration: underline;
+}
+
+#demo {
+    color: green;
+}
+
+.album-wrapper {
+    position: relative; /* Relative positioning to contain the button and album */
+    width: 100%; /* Full-width container */
+    /*max-width: 600px;  Optional: Limit the width */
+    margin: 20px auto; /* Center the container on the page */
+}
+
+.overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.5s ease; /* Smooth fade-out effect */
+    opacity: 1; /* Default visible state */
+
+    height: 345px;
+    width: 100%;
+
+}
+
+.overlay-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.album {
+    opacity: 0; /* Start fully transparent */
+    pointer-events: none; /* Disable interaction initially */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.album.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.album-header {
+    display: flex; /* Side-by-side layout for album art and details */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Space between album art and details */
+}
+
+.album-art {
+    width: 250px;
+    height: auto;
+    padding: 10px;
+}
+
+.album-details {
+    flex: 1;
+    /* Make the text container grow to fill the remaining space */
+    display: flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.artist {
+    font-size: small;
+    color: grey;
+    text-align: center;
+}
+
+.number {
+    position: absolute;
+    /* Position the number relative to the container */
+    top: 5px;
+    /* Distance from the top of the container */
+    right: 5px;
+    /* Distance from the left of the container */
+    font-size: 50px;
+    /* Adjust the font size */
+    font-weight: bold;
+    /* Make the number bold */
+    color: #555;
+    /* Optional: Color of the number */
+    padding: 2px 5px;
+    /* Add some padding around the number */
+    border-radius: 3px;
+    /* Optional: Rounded corners for the background */
+
+}
+.number-hidden {
+    position: absolute;
+    /* Position the number relative to the container */
+    top: 5px;
+    /* Distance from the top of the container */
+    right: 5px;
+    /* Distance from the left of the container */
+    font-size: 50px;
+    /* Adjust the font size */
+    font-weight: bold;
+    /* Make the number bold */
+    color: white;
+    /* Optional: Color of the number */
+    padding: 2px 5px;
+    /* Add some padding around the number */
+    border-radius: 3px;
+    /* Optional: Rounded corners for the background */
+
+}
+
+.links-pic {
+    border: none;
+    outline: none;
+}
+
+.links {
+    position: relative;
+    top: 250px;
+    right: 5px; 
+}
+
+.AppleMusic {
+    width: 25px;
+    height: auto;
+    border: none;
+    outline: none;
+}
+
+.Spotify {
+    width: 25px;
+    height: auto;
+    border: none;
+    outline: none;
+}
+
+.tracklist-section {
+    width: 100%; /* Full width of the container */
+    display: flex;
+    flex-direction: column;
+}
+
+.tracklist-dropdown {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.tracklist {
+    margin: 10px 0 0 20px;
+    padding-left: 20px;
+    list-style-type: none;
+    color: white;
+    display: none; /* Hidden by default */
+    transition: all 0.3s ease;
+}
+
+.tracklist.hidden {
+    display: none; /* Ensure hidden class hides the tracklist */
+}
+
+.tracklist.visible {
+    display: block;
+}
+
+
+
+.perfect {
+    color: aqua;
+}
+
+.amazing {
+    color: green;
+}
+
+.good {
+    color: yellow;
+}
+
+.okay {
+    color: orange;
+}
+
+.bad {
+    color: red;
+}

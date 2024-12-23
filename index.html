@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,102 @@
     <title>Your Website Title</title>
     <link rel="stylesheet" href="style.css"> <!-- Optional: Link to your CSS file -->
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Website</h1>
     </header>
+
+    <div class="album-wrapper">
+
+        <button class="overlay-button" id="show-album">
+            <span class="number-hidden">1</span>
+            Show Album
+        </button>
+
+        <div class="album" id="album">
+            <span class="number">1</span>
+            <div class="album-header">
+                <img src="images/Kendrick Lamar GNX.png" alt="GNX" class="album-art">
+                <div class="album-details">
+                    <h1 class="name">GNX</h1>
+                    <h2 class="artist">Kendrick Lamar</h2>
+                    <p>Review Here</p>
+                </div>
+                <div class="links">
+                    <a href="https://music.apple.com/us/album/gnx/1781270319" target="_blank" class="links-pic">
+                        <img src="images/Apple_Music_Icon_RGB_lg_073120.svg" alt="Apple Music" class="AppleMusic">
+                    </a>
+                    <a href="https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW?si=6YPYiRzgS-CEvxXVQ6q2wg"
+                        target="_blank" class="links-pic">
+                        <img src="images/Spotify.png" alt="Spotify" class="Spotify">
+                    </a>
+                </div>
+
+            </div>
+            <div class="tracklist-section">
+                <button class="tracklist-dropdown" id="toggle-tracklist">Show Tracklist</button>
+                <ol class="tracklist hidden" id="tracklist">
+                    <li class="amazing">1. wacced out murals</li>
+                    <li class="good">2. squabble up</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <div class="album-wrapper">
+
+        <button class="overlay-button" id="show-album">
+            <span class="number-hidden">1</span>
+            Show Album
+        </button>
+
+        <div class="album" id="album">
+            <span class="number">1</span>
+            <div class="album-header">
+                <img src="images/Kendrick Lamar GNX.png" alt="GNX" class="album-art">
+                <div class="album-details">
+                    <h1 class="name">GNX</h1>
+                    <h2 class="artist">Kendrick Lamar</h2>
+                    <p>Review Here</p>
+                </div>
+                <div class="links">
+                    <a href="https://music.apple.com/us/album/gnx/1781270319" target="_blank" class="links-pic">
+                        <img src="images/Apple_Music_Icon_RGB_lg_073120.svg" alt="Apple Music" class="AppleMusic">
+                    </a>
+                    <a href="https://open.spotify.com/album/0hvT3yIEysuuvkK73vgdcW?si=6YPYiRzgS-CEvxXVQ6q2wg"
+                        target="_blank" class="links-pic">
+                        <img src="images/Spotify.png" alt="Spotify" class="Spotify">
+                    </a>
+                </div>
+
+            </div>
+            <div class="tracklist-section">
+                <button class="tracklist-dropdown" id="toggle-tracklist">Show Tracklist</button>
+                <ol class="tracklist hidden" id="tracklist">
+                    <li class="amazing">1. wacced out murals</li>
+                    <li class="good">2. squabble up</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
     <main>
         <p>This is your home page. Customize it however you like!</p>
     </main>
+
+    <p class="special-paragraph">This is a special paragraph.</p>
+    <p id="unique-paragraph">This paragraph is unique!</p>
+    <p class="special-paragraph" id="unique-paragraph">This is styled by both.</p>
+
+    <button id="button">Click Me</button>
+    <p id="demo">This text will change.</p>
+
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; 2024 Trent Wiens</p>
     </footer>
     <script src="script.js"></script> <!-- Optional: Link to your JavaScript file -->
 </body>
+
 </html>
