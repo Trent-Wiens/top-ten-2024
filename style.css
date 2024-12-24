@@ -1,6 +1,6 @@
 /* Change the background color of the page */
 body {
-    background-color: lightblue;
+    background-color: black;
 }
 
 /* Style the main heading */
@@ -32,11 +32,70 @@ p {
     color: green;
 }
 
+a {
+    text-decoration: none;
+}
+
+
+
 .album-wrapper {
-    position: relative; /* Relative positioning to contain the button and album */
-    width: 100%; /* Full-width container */
+    position: relative;
+    /* Relative positioning to contain the button and album */
+    width: 100%;
+    /* Full-width container */
     /*max-width: 600px;  Optional: Limit the width */
-    margin: 20px auto; /* Center the container on the page */
+    margin: 20px auto;
+    /* Center the container on the page */
+    /* align-items: stretch; */
+    padding-bottom: 0px;
+}
+
+.honorable-header {
+    display: flex;
+    /* Side-by-side layout for album art and details */
+    align-items: center;
+    /* Align items at the top */
+    flex-direction: column;
+    width: 20%;
+}
+
+.honorable-pic {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+}
+
+.honorable-details {
+    flex: 1;
+    /* Make the text container grow to fill the remaining space */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    pointer-events: none;
+}
+
+.h-name {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: -10px;
+    font-style: italic;
+}
+
+.h-artist {
+    font-size: 15px;
+    color: grey;
+    text-align: center;
+    padding: none;
+    margin-bottom: -10px;
+}
+
+.h-review {
+    font-size: 16px;
+    color: gray;
+    text-align: center;
 }
 
 .overlay-button {
@@ -46,16 +105,41 @@ p {
     transform: translate(-50%, -50%);
     z-index: 10;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 50px;
+    background-color: black; 
+    /* color: #fff; */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+    /* Smooth fade-out effect */
+    opacity: 1;
+    /* Default visible state */
+
+    height: 345px;
+    width: 100%;
+
+}
+
+.h-overlay-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    padding: 10px 20px;
+    font-size: 50px;
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: opacity 0.5s ease; /* Smooth fade-out effect */
-    opacity: 1; /* Default visible state */
+    transition: opacity 0.5s ease;
+    /* Smooth fade-out effect */
+    opacity: 1;
+    /* Default visible state */
 
-    height: 345px;
+    height: 430px;
     width: 100%;
 
 }
@@ -66,9 +150,12 @@ p {
 }
 
 .album {
-    opacity: 0; /* Start fully transparent */
-    pointer-events: none; /* Disable interaction initially */
-    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    opacity: 0;
+    /* Start fully transparent */
+    pointer-events: none;
+    /* Disable interaction initially */
+    transition: opacity 0.5s ease;
+    /* Smooth fade-in effect */
     position: relative;
     display: flex;
     flex-direction: column;
@@ -77,6 +164,28 @@ p {
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: black;
+}
+
+.hms {
+    opacity: 0;
+    /* Start fully transparent */
+    pointer-events: none;
+    /* Disable interaction initially */
+    transition: opacity 0.5s ease;
+    /* Smooth fade-in effect */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.hms.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .album.visible {
@@ -91,15 +200,19 @@ p {
 }
 
 .album-header {
-    display: flex; /* Side-by-side layout for album art and details */
-    align-items: flex-start; /* Align items at the top */
-    gap: 20px; /* Space between album art and details */
+    display: flex;
+    /* Side-by-side layout for album art and details */
+    align-items: flex-start;
+    /* Align items at the top */
+    gap: 20px;
+    /* Space between album art and details */
 }
 
 .album-art {
     width: 250px;
     height: auto;
     padding: 10px;
+    pointer-events: none;
 }
 
 .album-details {
@@ -107,6 +220,7 @@ p {
     /* Make the text container grow to fill the remaining space */
     display: flex;
     flex-direction: column;
+    pointer-events: none;
 }
 
 .name {
@@ -115,10 +229,11 @@ p {
     text-align: center;
     font-weight: bold;
     margin: 0;
+    font-style: italic;
 }
 
 .artist {
-    font-size: small;
+    font-size: 25px;
     color: grey;
     text-align: center;
 }
@@ -141,13 +256,16 @@ p {
     border-radius: 3px;
     /* Optional: Rounded corners for the background */
 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 }
+
 .number-hidden {
-    position: absolute;
+    position: center;
     /* Position the number relative to the container */
-    top: 5px;
+    /* top: 5px; */
     /* Distance from the top of the container */
-    right: 5px;
+    /* right: 5px; */
     /* Distance from the left of the container */
     font-size: 50px;
     /* Adjust the font size */
@@ -159,18 +277,26 @@ p {
     /* Add some padding around the number */
     border-radius: 3px;
     /* Optional: Rounded corners for the background */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
 
 }
 
 .links-pic {
-    border: none;
-    outline: none;
+    border: black;
+    outline: 20px;
+}
+
+.h-links {
+    /* position: relative;
+    top: 250px;
+    right: 5px; */
 }
 
 .links {
     position: relative;
     top: 250px;
-    right: 5px; 
+    right: 5px;
 }
 
 .AppleMusic {
@@ -188,7 +314,8 @@ p {
 }
 
 .tracklist-section {
-    width: 100%; /* Full width of the container */
+    width: 100%;
+    /* Full width of the container */
     display: flex;
     flex-direction: column;
 }
@@ -209,18 +336,81 @@ p {
     padding-left: 20px;
     list-style-type: none;
     color: white;
-    display: none; /* Hidden by default */
+    display: block;
+    /* Hidden by default */
+    transition: all 0.3s ease;
+}
+
+.tracklist-wrapper {
+    /* margin: 10px 0 0 20px; */
+    /* padding-left: 20px; */
+    list-style-type: none;
+    color: white;
+    display: none;
+    /* Hidden by default */
+    transition: all 0.3s ease;
+    flex-direction: row;
+    width: 100%;
+}
+
+.ranks {
+    margin: 10px 0 0 20px;
+    position: relative;
+    padding-left: 75%;
+    list-style-type: none;
+    color: white;
+    display: block;
+    /* Hidden by default */
+    transition: all 0.3s ease;
+    
+}
+
+.rank-items {
+    margin: 10px 0 0 20px;
+    position: relative;
+    padding-left: 0%;
+    list-style-type: none;
+    color: white;
+    display: block;
+    /* Hidden by default */
+    transition: all 0.3s ease;
+    
+}
+
+.tracklist-ranks {
+    margin: 10px 0 0 20px;
+    padding-left: 20px;
+    list-style-type: none;
+    color: white;
+    display: none;
+    /* Hidden by default */
     transition: all 0.3s ease;
 }
 
 .tracklist.hidden {
-    display: none; /* Ensure hidden class hides the tracklist */
+    display: none;
+    /* Ensure hidden class hides the tracklist */
 }
 
 .tracklist.visible {
     display: block;
 }
 
+.ranks.hidden {
+    display: none;
+}
+
+.ranks.visible {
+    display: block;
+}
+
+.tracklist-wrapper.hidden {
+    display: none;
+}
+
+.tracklist-wrapper.visible {
+    display: flex;
+}
 
 
 .perfect {
