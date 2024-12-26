@@ -106,7 +106,7 @@ a {
     z-index: 10;
     padding: 10px 20px;
     font-size: 50px;
-    background-color: black; 
+    background-color: black;
     /* color: #fff; */
     border: none;
     border-radius: 10px;
@@ -238,6 +238,12 @@ a {
     text-align: center;
 }
 
+.review {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+
 .number {
     position: absolute;
     /* Position the number relative to the container */
@@ -294,9 +300,9 @@ a {
 }
 
 .links {
-    position: relative;
-    top: 250px;
-    right: 5px;
+    position: absolute;
+    top: 280px;
+    left: 115px;
 }
 
 .AppleMusic {
@@ -318,6 +324,7 @@ a {
     /* Full width of the container */
     display: flex;
     flex-direction: column;
+    padding-top: 10px;
 }
 
 .tracklist-dropdown {
@@ -339,6 +346,8 @@ a {
     display: block;
     /* Hidden by default */
     transition: all 0.3s ease;
+    font-size: 20px;
+    width: 75%;
 }
 
 .tracklist-wrapper {
@@ -351,18 +360,23 @@ a {
     transition: all 0.3s ease;
     flex-direction: row;
     width: 100%;
+    pointer-events: none;
 }
 
 .ranks {
     margin: 10px 0 0 20px;
-    position: relative;
-    padding-left: 75%;
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    /* padding-left: 75%; */
     list-style-type: none;
     color: white;
     display: block;
     /* Hidden by default */
     transition: all 0.3s ease;
-    
+    font-size: 20px;
+    pointer-events: none;
+
 }
 
 .rank-items {
@@ -374,7 +388,7 @@ a {
     display: block;
     /* Hidden by default */
     transition: all 0.3s ease;
-    
+
 }
 
 .tracklist-ranks {
@@ -418,7 +432,7 @@ a {
 }
 
 .amazing {
-    color: green;
+    color: rgb(0, 189, 0);
 }
 
 .good {
@@ -431,4 +445,12 @@ a {
 
 .bad {
     color: red;
+}
+
+.interlude {
+    color: grey;
+}
+
+.best {
+    color: violet;
 }
