@@ -1,42 +1,72 @@
-/* Change the background color of the page */
+:root {
+    --color1: #780116;
+    --color2: #ffa630;
+    --color3: #e8eddf;
+    --color4: #0d0628;
+    --color5: #0d1821;
+}
+
+
 body {
-    background-color: black;
+    background-color: var(--color3);
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header {
+    pointer-events: none;
 }
 
 /* Style the main heading */
 h1 {
-    color: darkblue;
+    color: var(--color5);
     text-align: center;
 }
 
-/* Style paragraphs */
-p {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    color: gray;
+.intro-para {
+    /* font-family: Arial, sans-serif; */
+    font-size: 20px;
+    color: var(--color5);
+    text-align: center;
+    margin: 0 25% 1% 25%;
+    pointer-events: none;
+    border: none
 }
 
-/* Style elements with the class "special-paragraph" */
-.special-paragraph {
-    color: green;
-    font-weight: bold;
-}
-
-/* Style the element with the ID "unique-paragraph" */
-#unique-paragraph {
-    color: red;
-    text-decoration: underline;
-}
-
-#demo {
-    color: green;
+.intro-para-link {
+    pointer-events: auto;
 }
 
 a {
     text-decoration: none;
 }
 
+#reveal-all-button {
 
+    width: 25%;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    text-align: center;
+    color: var(--color3);
+    background-color: var(--color1);
+
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+
+    border-radius: 5px;
+    border: 2px solid var(--color4);
+    
+    
+}
 
 .album-wrapper {
     position: relative;
@@ -62,7 +92,9 @@ a {
 .honorable-pic {
     width: 200px;
     height: auto;
-    padding: 10px;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 1%;
 }
 
 .honorable-details {
@@ -76,7 +108,7 @@ a {
 
 .h-name {
     font-size: 25px;
-    color: white;
+    color: var(--color2);
     text-align: center;
     font-weight: bold;
     margin: 0;
@@ -86,7 +118,7 @@ a {
 
 .h-artist {
     font-size: 15px;
-    color: grey;
+    color: var(--color2);
     text-align: center;
     padding: none;
     margin-bottom: -10px;
@@ -94,7 +126,7 @@ a {
 
 .h-review {
     font-size: 16px;
-    color: gray;
+    color: var(--color3);
     text-align: center;
 }
 
@@ -106,9 +138,17 @@ a {
     z-index: 10;
     padding: 10px 20px;
     font-size: 50px;
-    background-color: black;
-    /* color: #fff; */
-    border: none;
+    background-color: var(--color1);
+    color: var(--color3);
+
+    border: 2px solid var(--color5);    
+
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+
     border-radius: 10px;
     cursor: pointer;
     transition: opacity 0.5s ease;
@@ -116,7 +156,10 @@ a {
     opacity: 1;
     /* Default visible state */
 
-    height: 345px;
+    gap: 20px;
+    padding: 10px;
+
+    height: 365px;
     width: 100%;
 
 }
@@ -129,9 +172,16 @@ a {
     z-index: 10;
     padding: 10px 20px;
     font-size: 50px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border: none;
+    background-color: var(--color1);
+    color: var(--color3);
+
+    border: 2px solid var(--color5);  
+
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;  
+    font-style: normal;
+
     border-radius: 10px;
     cursor: pointer;
     transition: opacity 0.5s ease;
@@ -139,12 +189,18 @@ a {
     opacity: 1;
     /* Default visible state */
 
-    height: 430px;
+
+    height: 460px;
     width: 100%;
 
 }
 
 .overlay-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.h-overlay-button.hidden {
     opacity: 0;
     pointer-events: none;
 }
@@ -161,9 +217,9 @@ a {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid var(--color5);
     border-radius: 10px;
-    background-color: black;
+    background-color: var(--color4);
 }
 
 .hms {
@@ -178,9 +234,9 @@ a {
     flex-direction: row;
     gap: 20px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color5);
     border-radius: 10px;
-    background-color: black;
+    background-color: var(--color4);
 }
 
 .hms.visible {
@@ -199,6 +255,12 @@ a {
     transition: opacity 0.5s ease;
 }
 
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
+
 .album-header {
     display: flex;
     /* Side-by-side layout for album art and details */
@@ -211,8 +273,10 @@ a {
 .album-art {
     width: 250px;
     height: auto;
-    padding: 10px;
+    /* padding: 10px; */
     pointer-events: none;
+    border: 2px solid black;
+    border-radius: 1%;
 }
 
 .album-details {
@@ -225,7 +289,7 @@ a {
 
 .name {
     font-size: 50px;
-    color: white;
+    color: var(--color2);
     text-align: center;
     font-weight: bold;
     margin: 0;
@@ -234,13 +298,13 @@ a {
 
 .artist {
     font-size: 25px;
-    color: grey;
+    color: var(--color2);
     text-align: center;
 }
 
 .review {
     font-size: 15px;
-    color: white;
+    color: var(--color3);
     text-align: center;
 }
 
@@ -255,14 +319,20 @@ a {
     /* Adjust the font size */
     font-weight: bold;
     /* Make the number bold */
-    color: #555;
+    color: var(--color2);
     /* Optional: Color of the number */
     padding: 2px 5px;
     /* Add some padding around the number */
     border-radius: 3px;
     /* Optional: Rounded corners for the background */
 
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 
 }
 
@@ -277,13 +347,13 @@ a {
     /* Adjust the font size */
     font-weight: bold;
     /* Make the number bold */
-    color: white;
+    color: var(--color3);
     /* Optional: Color of the number */
     padding: 2px 5px;
     /* Add some padding around the number */
     border-radius: 3px;
     /* Optional: Rounded corners for the background */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 
 
 }
@@ -301,7 +371,7 @@ a {
 
 .links {
     position: absolute;
-    top: 280px;
+    top: 270px;
     left: 115px;
 }
 
@@ -324,18 +394,26 @@ a {
     /* Full width of the container */
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .tracklist-dropdown {
     padding: 5px 10px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007bff;
+    font-size: 18px;
+    color: var(--color4);
+    background-color: var(--color2);
     border: none;
     border-radius: 3px;
     cursor: pointer;
     margin-bottom: 10px;
+
+    font-family: "Funnel Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+
+
 }
 
 .tracklist {
@@ -426,6 +504,9 @@ a {
     display: flex;
 }
 
+#button {
+    display: none;
+}
 
 .perfect {
     color: aqua;

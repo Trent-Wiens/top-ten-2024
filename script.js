@@ -3,8 +3,9 @@ document.getElementById("button").addEventListener("click", function () {
     document.getElementById("demo").textContent = "You clicked the button!";
 });
 
-// Select the button and the album container
-
+window.addEventListener("load", () => {
+    window.scrollTo(0, 0); // Reset scroll position to the top
+});
 
 // Handle all "Show Album" buttons
 document.querySelectorAll('.overlay-button').forEach(button => {
@@ -61,4 +62,39 @@ document.querySelectorAll('.tracklist-dropdown').forEach(button => {
             button.textContent = 'Show Tracklist';
         }
     });
+});
+
+
+const revealAllButton = document.getElementById('reveal-all-button');
+
+revealAllButton.addEventListener('click', () => {
+    const albums = document.querySelectorAll('.album');
+    const honorableMentions = document.querySelector('.hms');
+    const allButtons = document.querySelectorAll('.overlay-button, .h-overlay-button');
+
+    if (revealAllButton.textContent === 'Reveal All') {
+        // Reveal all albums
+        albums.forEach(album => album.classList.add('visible'));
+        // Reveal honorable mentions
+        if (honorableMentions) honorableMentions.classList.add('visible');
+        // Hide all individual buttons
+        allButtons.forEach(button => {
+            button.classList.add('hidden');
+            button.style.display = 'none';
+        });
+        // Change button text to "Hide All"
+        revealAllButton.textContent = 'Hide All';
+    } else {
+        // Hide all albums
+        albums.forEach(album => album.classList.remove('visible'));
+        // Hide honorable mentions
+        if (honorableMentions) honorableMentions.classList.remove('visible');
+        // Show all individual buttons
+        allButtons.forEach(button => {
+            button.classList.remove('hidden');
+            button.style.display = 'block';
+        });
+        // Change button text back to "Reveal All"
+        revealAllButton.textContent = 'Reveal All';
+    }
 });

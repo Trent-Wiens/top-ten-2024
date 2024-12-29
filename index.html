@@ -9,12 +9,21 @@
     <link rel="stylesheet" href="style.css"> <!-- Optional: Link to your CSS file -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Nabla&family=Tangerine:wght@400;700&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+
+</head>
 
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>Trent's Top Ten 2024</h1>
+        <p class="intro-para">2024 has been a very exciting year in music, and I have decided to put together my top ten
+            list! You can
+            click each number and it will reveal the album. Each one has a little bit about why I like it, and then the
+            tracklist ranking each song. I am no graphic designer, but I am hoping that I can improve it each year going
+            forward! You can also reveal all if you'd like.</p>
     </header>
+
+    <button id="reveal-all-button">Reveal All</button>
 
     <div class="album-wrapper">
 
@@ -67,7 +76,7 @@
             <div class="honorable-header">
                 <img src="images/NoHands.jpg" alt="No Hands" class="honorable-pic">
                 <div class="honorable-details">
-                    <h1 class="h-name"id="no-hands">NO HANDS</h1>
+                    <h1 class="h-name" id="no-hands">NO HANDS</h1>
                     <h2 class="h-artist">Joey Valence & Brae</h2>
                     <p class="h-review"><em>NO HANDS</em> is very reminicient of the Beastie Boys, in all the best ways.
                         From the funrock/rap production, to the fun bars and lyricism, it is a great listen all the way
@@ -850,6 +859,14 @@
         </div>
     </div>
 
+    <footer>
+        <p class="intro-para">If you are curious, the full list of the albums I listened to this year is <a class="intro-para-link"
+                href="https://docs.google.com/spreadsheets/d/1_pds3FHudkz2cozAeFsSVw4ZXVd3yrLNq9P918w703I/edit?usp=sharing">here</a>.
+            They are not in any specific order, just generally the order that I ranked them/they
+            came out. It is from a google sheet I share with my friends where we suggest albums to listen to and rank (I
+            just removed their rankings and the albums I did not get to)</p>
+    </footer>
+
     <!-- <main>
         <p>This is your home page. Customize it however you like!</p>
     </main> -->
@@ -860,9 +877,9 @@
 
     <button id="button"></button>
 
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 Trent Wiens</p>
-    </footer>
+    </footer> -->
     <script src="script.js"></script> <!-- Optional: Link to your JavaScript file -->
 </body>
 
