@@ -10,25 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <header>
         <h1>Trent's Top Ten 2024</h1>
         <p class="intro-para">2024 has been a very exciting year in music, and I have decided to put together my top ten
-            list! You can
-            click each number and it will reveal the album. Each one has a little bit about why I like it, and then the
-            tracklist ranking each song. I am no graphic designer, but I am hoping that I can improve it each year going
-            forward! You can also reveal all if you'd like.</p>
+            list! You can click each number and it will reveal the album (or you can reveal if you aren't into that).
+            Each one has a little bit about why I like it, and then the tracklist with my ranking of each song. I am no
+            graphic designer, but I am hoping that I can improve this website each year going forward!</p>
     </header>
 
-    <button id="reveal-all-button">Reveal All</button>
+    <div class="button-group">
+        <button id="hide-all-button">Hide All</button>
+        <button id="reveal-all-button">Reveal All</button>    
+    </div>
+    
 
     <div class="album-wrapper">
 
         <button class="h-overlay-button" id="show-album">
-            Honorable Mentions
+            <span class="button-hm">
+                Honorable Mentions
+            </span>
         </button>
 
         <div class="hms" id="album">
@@ -58,7 +63,7 @@
                 <div class="honorable-details">
                     <h1 class="h-name" id="short-n-sweet">Short n' Sweet</h1>
                     <h2 class="h-artist">Sabrina Carpenter</h2>
-                    <p class="h-review">Sabrina has had a great year this year and I could not get 'Please Please
+                    <p class="h-review">Sabrina has had a great year. I could not get 'Please Please
                         Please' and 'Espresso' out of my head all year.</p>
                 </div>
                 <div class="h-links">
@@ -863,24 +868,14 @@
         <p class="intro-para">If you are curious, the full list of the albums I listened to this year is <a
                 class="intro-para-link"
                 href="https://docs.google.com/spreadsheets/d/1_pds3FHudkz2cozAeFsSVw4ZXVd3yrLNq9P918w703I/edit?usp=sharing">here</a>.
-            They are not in any specific order, it's from a google sheet I share with my friends where we suggest albums
+            They are not in any specific order - it's from a google sheet I share with my friends where we suggest
+            albums
             to listen to and rank (I
-            removed their rankings and the albums I did not get to)</p>
+            removed their rankings and the albums I did not get to).</p>
     </footer>
 
-    <!-- <main>
-        <p>This is your home page. Customize it however you like!</p>
-    </main> -->
-
-    <!-- <p class="special-paragraph">This is a special paragraph.</p>
-    <p id="unique-paragraph">This paragraph is unique!</p>
-    <p class="special-paragraph" id="unique-paragraph">This is styled by both.</p> -->
-
+    <!-- this button is required for some reason ¯\_(ツ)_/¯-->
     <button id="button"></button>
-
-    <!-- <footer>
-        <p>&copy; 2024 Trent Wiens</p>
-    </footer> -->
     <script src="script.js"></script> <!-- Optional: Link to your JavaScript file -->
 </body>
 
